@@ -1,0 +1,36 @@
+@import "./global.less";
+
+body {
+  background-color: black;
+  h1 {
+    background-color: red;
+    color: white;
+  }
+}
+.bar {
+  width: @width;
+  background-color: @second;
+}
+
+.foo {
+  .bar();
+  background-color: yellow;
+}
+
+.doo {
+  height: 100px;
+  // width: 300px;
+  background-color: yellowgreen;
+  box-shadow: 3px 3px 0px bisque;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid red;
+  @media (max-width: 1200px) {
+    width: 1000px;
+    background-color: honeydew;
+  }
+  @media (max-width: 900px) {
+    width: 800px;
+    background-color: goldenrod;
+  }
+}
