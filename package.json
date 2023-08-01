@@ -1,20 +1,22 @@
 {
-  "name": "my-env",
+  "name": "Hi-Webpack",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.dev.config.js --open",
-    "build:pro": "webpack --config ./webpack.pro.config.js",
-    "build:env": "webpack --config ./webpack.pro.config.js --env.name=jty --env.foo=true",
+    "build:pro": "cross-env  NODE_ENV=development  webpack --config ./webpack.pro.config.js",
+    "build:env": "cross-env  NODE_ENV=production webpack --config ./webpack.pro.config.js --env.name=jty --env.foo=true",
     "eslint": "eslint src/**/*.?s --fix",
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
+    "@types/react": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
     "autoprefixer": "^10.3.1",
     "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
     "css-loader": "5",
     "eslint": "^7.31.0",
     "eslint-config-standard": "^14.1.1",
@@ -49,8 +51,10 @@
     "@babel/preset-env": "^7.14.8",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.14.5",
+    "@types/react-dom": "^18.2.7",
     "babel-loader": "^8.2.2",
-    "react": "17"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "lint-staged": {
     "src/**/*.{js,ts}": [

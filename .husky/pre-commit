@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "husky 面对疾风吧......" 
+echo "面对疾风吧......" 
 npm run lint-staged

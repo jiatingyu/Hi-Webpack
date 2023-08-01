@@ -12,6 +12,7 @@ module.exports = (env) => {
     optimization: {
       minimize: true,
       minimizer: [
+        // 生产环境的压缩
         new OptimizeCssAssetsWebpackPlugin(),
         new TerserWebpackPlugin(),
       ],

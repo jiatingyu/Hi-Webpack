@@ -20,6 +20,9 @@ module.exports = {
     semi: 'warn',
     'comma-dangle': 'off',
     'no-undef': 0,
+    'no-unused-vars': 0,
+    'no-use-before-define': 0,
+    indent: 0,
   },
   globals: {
     // 设置一些全局变量
